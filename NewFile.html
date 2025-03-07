@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Люблю тебя</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(45deg, #ff8faf, #f38fff, #ff8f8f);
+      font-family: 'Satisfy', cursive;
+    }
+    .card {
+      width: 300px;
+      height: 500px;
+      position: relative;
+      perspective: 1000px;
+    }
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .card-front {
+      background: #ff5c8a;
+    }
+    .card-back {
+      background: #ff8faf;
+      transform: rotateY(180deg);
+    }
+    .title {
+      font-size: 28px;
+      padding: 20px;
+    }
+    .telegram-message {
+      display: none; /* Скрыто по умолчанию */
+      text-align: center;
+      font-size: 24px;
+      color: white;
+    }
+    @media (max-width: 600px) {
+      .card {
+        display: none; /* Скрываем карточку на мобильных устройствах */
+      }
+      .telegram-message {
+        display: block; /* Показываем сообщение для Telegram */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <div class="title">С 8 марта 💋💋💋</div>
+      </div>
+      <div class="card-back">
+        <div class="title">Люблю тебя кошечка ❤️❤️❤️</div>
+      </div>
+    </div>
+  </div>
+  <div class="telegram-message">
+    Люблю тебя кошечка ❤️❤️❤️<br>
+    С 8 марта 💋💋💋<br>
+    Открой этот файл в браузере, чтобы увидеть анимацию!
+  </div>
+</body>
+</html>
